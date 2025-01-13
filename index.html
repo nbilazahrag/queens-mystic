@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css\style.css">
+    <title>Queens Mystic General Store</title>
+    <link rel="shortcut icon" href="assets\kucing.png"/>
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">Queens</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#Executive">Our Executive</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Order Form</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="assets\main.png" id="main">
+        <h2 id="text">Queens Mystic Store.</h2>
+        <a href="#Executive" id="btn">Explore</a>
+    </section>
+ <!--Executive-->
+    <div class="Executive" id="Executive">
+        <h2>Our Executive</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit nihil placeat sed recusandae 
+            illum tenetur possimus explicabo minima assumenda, fuga veniam dolor mollitia quo eveniet unde 
+            labore! Aspernatur, a deleniti.</p>
+    </div>
+
+    <!--team-container----------->
+    <div class="team-box-container">
+        <div class="member-box">
+        <!--irene-------->
+            <div class="irene">
+                <img src="assets\irene1.png">
+                <!--hover-->
+                <img src="assets/irene2.png" class="hover-img">
+            </div>
+        </div>
+    </div>
     
+    <script>
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px'
+        })
+    </script>
 </body>
 </html>
