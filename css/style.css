@@ -12,11 +12,12 @@ body{
     background-color: #1a191e;
 }
 header{
-    position: absolute;
+    position: fixed;
+    background: linear-gradient(#1a191e, transparent);
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 8px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,6 +27,7 @@ header .logo{
     color: #d62909;
     font-weight: 700;
     text-decoration: none;
+    text-shadow: #d8ab81;
     font-size: 2em;
 }
 header ul{
@@ -45,7 +47,12 @@ header ul li a{
 }
 header ul li a:hover, .active{
     background: #1b346a;
-    color: #d62909;
+    color: blanchedalmond;
+}
+header .menu-shop{
+    margin-top: 8px;
+    color: blanchedalmond;
+    cursor: pointer;
 }
 section{
     position: relative;
@@ -66,7 +73,7 @@ section::before{
     background: linear-gradient(to top,#1a191e,transparent);
     z-index: 1000;
 }
-section img{
+section img#main{
     position: absolute;
     top: 0;
     left: 0;
@@ -76,16 +83,24 @@ section img{
     z-index: 10;
     pointer-events: none;
 }
-select img#main{
-    z-index: 10;
-}
 #text{
     position: absolute;
+    margin-bottom: 40px;
     right: 55px;
     color: blanchedalmond;
+    text-align: right;
     white-space: nowrap;
-    font-size: 70px;
+    font-size: 50px;
     z-index: 9;
+}
+#desc{
+    position: absolute;
+    margin-top: 100px;
+    right: 55px;
+    color: blanchedalmond;
+    text-align: right;
+    white-space: nowrap;
+
 }
 #btn{
     border: 20px;
@@ -95,6 +110,7 @@ select img#main{
     background: rgb(255, 255, 255, 0.2);
     color: #eed3b8;
     font-size: 18px;
+    margin-bottom: -80px;
     margin-right: -750px;
     z-index: 9;
     transform: translateY(80px);
@@ -103,8 +119,8 @@ select img#main{
     position: relative;
     padding: 50px;
 }
-.Executive h2{
-    font-size: 50px;
+.Executive h2, .product-first h2{
+    font-size: 40px;
     margin-bottom: 10px;
     color: #eed3b8;
     animation: autoShowAnimation;
@@ -126,15 +142,11 @@ select img#main{
 .member-box{
     box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.15);
     background-color: #d8ab81;
-    border: 3px;
     border-radius: 20px;
-    border-style: outset;
-    border-color: #c61406;
     width: 270px;
     margin-left: 50px;
     align-items: center;
     position: relative;
-    cursor: pointer;
 }
 .member-img{
     height: 285px;
@@ -146,6 +158,7 @@ select img#main{
     object-position: center;
     object-fit: cover;
     position: relative;
+    cursor: pointer;
 }
 .hover-img{
     position: absolute;
@@ -177,14 +190,14 @@ select img#main{
     z-index: 2;
 }
 .member-name h3, .member-name h5{
-    color: #c61406;
+    color: #1b346a;
     margin: 0px;
     letter-spacing: 0.3px;
 }
 .member-name h5{
     padding: 3px;
     color: #1a191e;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 .member-name p{
@@ -193,9 +206,90 @@ select img#main{
 }
 .team-box-container{
     display: grid;
-    grid-template-columns: 300px 295px 350px;
+    grid-template-columns: 295px 295px 300px;
     grid-template-rows: auto auto auto;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
     grid-gap: 15px;
+}
+.product-first{
+    position: relative;
+    padding: 50px;
+    color: #eed3b8;
+}
+.locing{
+    margin: auto;
+    display: flex;
+    height: 120px;
+}
+.product-first h2, .product-first p{
+    margin-top: 30px;
+    text-align: center;
+}
+ 
+
+
+
+
+
+ .product-box{
+    box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.15);
+    background-color: #eed3b8;
+    border-radius: 20px;
+    width: 200px;
+    height: 300px;
+    margin-left: 40px;
+    align-items: center;
+    position: relative;
+}
+.product-img{
+    height: 190px;
+}
+.product-img img{
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 190px;
+    object-position: center;
+    object-fit: cover;
+    position: relative;
+}
+.product-name{
+    border-radius: 20px 0px 20px 20px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eed3b8;
+    z-index: 2;
+}
+.product-name h4, .product-name h5{
+    color: #1b346a;
+    margin: 0px;
+    letter-spacing: 0.3px;
+}
+.product-name h5{
+    padding: 3px;
+    color: #1a191e;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.rating{
+    color: #d62909;
+}
+.product-name p{
+    padding: 0px;
+    font-size: 12px;
+}
+.product-box-container{
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px;
+    grid-template-rows: 370px;
+    grid-gap: 1px;
+}
+button{
+    background-color: #1b346a;
+    color: #eed3b8;
+    padding: 5px 40px;
+    border-radius: 20px;
+    cursor: pointer;
 }
